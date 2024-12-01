@@ -10,34 +10,31 @@ class Stack{
         if(top==MAX-1)
         {
             cout<<"Stack overflow occured"<<endl;
+            return;
         }
-        else{
-            top++;
-            a[top]=data;
-        }
+        top++;
+        a[top]=data;
     }
     void pop()
     {
         if(top==-1)
         {
             cout<<"stack underflow occured"<<endl;
-        }
-        else{
-            cout<<a[top]<<" is poped."<<endl;
-            top--;
-        }
+            return;
+        }        
+        cout<<a[top]<<" is poped."<<endl;
+        top--;
     }
     void traverse(){
         if(top==-1)
         {
             cout<<"Nothing to display";
+            return;
         }
-        else{
         cout<<"Data in stack"<<endl;
         for(int i=0;i<=top;i++)
         {
             cout<<a[i]<<endl;
-        }
         }
     }
 };
@@ -74,6 +71,6 @@ int main()
             cout<<"wrong input"<<endl;
             break;
         }
-        
+
     }while(i);
 }
